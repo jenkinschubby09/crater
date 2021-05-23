@@ -200,22 +200,22 @@ export default {
       }
 
       if (this.selectedViewCustomer.customer.billing_address.address_street_1) {
-        billingAddress += `<span>${this.selectedViewCustomer.customer.billing_address.address_street_1},</span><br>`
+        billingAddress += `<span>${this.selectedViewCustomer.customer.billing_address.address_street_1.replace(/</g, '&lt;').replace(/>/g, '&gt;')},</span><br>`
       }
       if (this.selectedViewCustomer.customer.billing_address.address_street_2) {
-        billingAddress += `<span>${this.selectedViewCustomer.customer.billing_address.address_street_2},</span><br>`
+        billingAddress += `<span>${this.selectedViewCustomer.customer.billing_address.address_street_2.replace(/</g, '&lt;').replace(/>/g, '&gt;')},</span><br>`
       }
       if (this.selectedViewCustomer.customer.billing_address.city) {
-        billingAddress += `<span>${this.selectedViewCustomer.customer.billing_address.city},</span> `
+        billingAddress += `<span>${this.selectedViewCustomer.customer.billing_address.city.replace(/</g, '&lt;').replace(/>/g, '&gt;')},</span> `
       }
       if (this.selectedViewCustomer.customer.billing_address.state) {
-        billingAddress += `<span>${this.selectedViewCustomer.customer.billing_address.state},</span><br>`
+        billingAddress += `<span>${this.selectedViewCustomer.customer.billing_address.state.replace(/</g, '&lt;').replace(/>/g, '&gt;')},</span><br>`
       }
       if (this.selectedViewCustomer.customer.billing_address.country) {
-        billingAddress += `<span>${this.selectedViewCustomer.customer.billing_address.country.name}.</span> `
+        billingAddress += `<span>${this.selectedViewCustomer.customer.billing_address.country.name.replace(/</g, '&lt;').replace(/>/g, '&gt;')}.</span> `
       }
       if (this.selectedViewCustomer.customer.billing_address.zip) {
-        billingAddress += `<span>${this.selectedViewCustomer.customer.billing_address.zip}.</span> `
+        billingAddress += `<span>${this.selectedViewCustomer.customer.billing_address.zip.replace(/</g, '&lt;').replace(/>/g, '&gt;')}.</span> `
       }
       return billingAddress
     },
@@ -233,24 +233,24 @@ export default {
       if (
         this.selectedViewCustomer.customer.shipping_address.address_street_1
       ) {
-        shippingAddress += `<span>${this.selectedViewCustomer.customer.shipping_address.address_street_1},</span><br>`
+        shippingAddress += `<span>${this.selectedViewCustomer.customer.shipping_address.address_street_1.replace(/</g, '&lt;').replace(/>/g, '&gt;')},</span><br>`
       }
       if (
         this.selectedViewCustomer.customer.shipping_address.address_street_2
       ) {
-        shippingAddress += `<span>${this.selectedViewCustomer.customer.shipping_address.address_street_2},</span><br>`
+        shippingAddress += `<span>${this.selectedViewCustomer.customer.shipping_address.address_street_2.replace(/</g, '&lt;').replace(/>/g, '&gt;')},</span><br>`
       }
       if (this.selectedViewCustomer.customer.shipping_address.city) {
-        shippingAddress += `<span>${this.selectedViewCustomer.customer.shipping_address.city},</span> `
+        shippingAddress += `<span>${this.selectedViewCustomer.customer.shipping_address.city.replace(/</g, '&lt;').replace(/>/g, '&gt;')},</span> `
       }
       if (this.selectedViewCustomer.customer.shipping_address.state) {
-        shippingAddress += `<span>${this.selectedViewCustomer.customer.shipping_address.state},</span><br>`
+        shippingAddress += `<span>${this.selectedViewCustomer.customer.shipping_address.state.replace(/</g, '&lt;').replace(/>/g, '&gt;')},</span><br>`
       }
       if (this.selectedViewCustomer.customer.shipping_address.country) {
-        shippingAddress += `<span>${this.selectedViewCustomer.customer.shipping_address.country.name}.</span> `
+        shippingAddress += `<span>${this.selectedViewCustomer.customer.shipping_address.country.name.replace(/</g, '&lt;').replace(/>/g, '&gt;')}.</span> `
       }
       if (this.selectedViewCustomer.customer.shipping_address.zip) {
-        shippingAddress += `<span>${this.selectedViewCustomer.customer.shipping_address.zip}.</span> `
+        shippingAddress += `<span>${this.selectedViewCustomer.customer.shipping_address.zip.replace(/</g, '&lt;').replace(/>/g, '&gt;')}.</span> `
       }
       return shippingAddress
     },
